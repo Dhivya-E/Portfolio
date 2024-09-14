@@ -1,0 +1,295 @@
+/* Color variables */
+:root {
+    --white-color: #fff;
+    --bg-color: #038994;
+    --gray-color: #ccc;
+    --boxshadow: rgb(247, 243, 240);
+    --textshadow: rgb(246, 211, 235);
+ 
+  }
+  html {
+    scroll-behavior: smooth;
+    cursor: none; 
+  }
+  /* Changing background color */
+  body {
+    background: var(--bg-color) !important;
+    
+  }
+  header{  
+    background-color: black !important;
+    color:white !important;
+  }
+  /* Changing link color */
+  .nav-item .nav-link {
+    color: var(--white-color);
+    
+  }
+  nav{
+    font-family: "Varela Round", sans-serif !important;
+  font-size: 15px !important;
+  font-style: normal;
+  
+  }
+  .nav-link:hover{
+    color:rgb(78, 191, 239) !important;
+}
+
+
+  /* Hero section background image */
+  .hero {
+    height: 100vh;
+    background-image: url("./images/bg.gif");
+    background-repeat: no-repeat;
+    background-position: 60% 0%;
+    background-size: cover;
+    background-attachment: fixed;  
+     
+  }
+  .hero h1{
+    margin-top: -150px;
+    font-family: 'Dancing Script', cursive !important;
+    color: black !important;
+    letter-spacing: 3px;
+    font-size: 50px;
+  }
+ .hero p{
+  font-family: "Ultra", serif;
+  font-size: 30px;
+  letter-spacing: 2px;
+  color: #25386d !important;
+ }
+  .hero a{
+    background-color: black;
+    color:white;
+    font-size: 12px;
+    text-shadow: none;
+    margin-top: -30px;
+  }
+  #skills i {
+    height: 100px;
+    width: 100px;
+    
+  }
+  
+  #portfolio img {
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  #about .img,
+  #about img,
+  .hire-text h2 {
+    position: relative;
+    
+  }
+  
+  /* Timeline background line */
+  #about .img::before {
+    content: "";
+    left: 50%;
+    width: 4px;
+    position: absolute;
+    
+    height: calc(100% + 150px );
+    background: var(--gray-color);
+  }
+  
+  #about img,
+  #about .hire-text h2 {
+    width: 140px;
+    
+  }
+  
+  #about .hire-text h2 {
+    height: 140px;
+  }
+  
+  .social-icons a {
+    width: 40px;
+    height: 40px;
+  }
+  .cardn{
+    
+    border-radius: 5%;
+    
+  }
+  footer{
+    background-color: black;
+  }
+  footer .social-icons a {
+    width: 30px;
+    height: 30px;
+    
+  }
+  
+  #cv img {
+    width: 230px;
+  }
+  
+  /* Contact section background image */
+  #portfolio {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    
+    background-image: url("../images/contact-bg.jpeg");
+  }
+  
+  @media screen and (max-width: 990px) {
+    #skills .cardn {
+      width: calc(100% / 2 - 10px) !important;
+    }
+  }
+  
+  @media screen and (max-width: 668px) {
+    #skills .cardn,
+    #portfolio .card-wrapper {
+      width: 100% !important;
+    }
+   #about .hire-text h2 {
+     height: 70px;
+     width: 70px;
+   }
+  }
+  
+
+
+
+
+
+  
+  
+  
+  .typewriter p {
+    max-width: max-content;
+    overflow: hidden; 
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0; /* Gives that scrolling effect as the typing happens */
+     /* This will create the blinking cursor effect */
+}
+
+.wrapper {
+    animation: slide-text 20s steps(1, end) infinite;
+}
+
+.wrapper .p1 {
+    margin: 1rem 0;
+    animation: 
+        typing-erase 8s steps(80, end) 1, /* Adjust the duration and repeat */
+        blink-caret .5s step-end infinite;
+}
+
+.hidden-box {
+    display: inline-block;
+    overflow: hidden;
+    width:100%;
+    transition: width 2s ease 8s; /* Delay the reveal until after .p1 is done */
+}
+
+.wrapper .p2 {
+    margin: 1rem 0;
+    transform: translateX(100%);
+    animation: 
+        typing-backward 8s steps(80, end) 1 0s forwards , /* Delay the start until after .hidden-box expands */
+        blink-caret .5s step-end infinite 12s; /* Cursor blink starts with the typing */
+}
+
+/* The type and erase effect for .p1 */
+@keyframes typing-erase {
+    0% { width: 0 }
+    50%, 80% { width: 100% }
+  
+}
+
+/* The type and backward appearance effect for .p2 */
+@keyframes typing-backward {
+    0% { transform: translateX(100%); }
+    50%,100% { transform: translateX(0); }
+   
+}
+
+/* The typewriter cursor effect */
+
+/* Define the keyframes for fade-in effect */
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Initial state for heading and subheading */
+.fade-in-heading {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+/* Initial state for images */
+.fade-in-img {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+  transition-delay: 1s; /* Delay after heading and subheading appear */
+}
+
+/* Initial state for first set of text */
+.fade-in-text-1 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  transition-delay: 2s; /* Delay after images appear */
+}
+
+/* Initial state for second set of text */
+.fade-in-text-2 {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 2s ease-out, transform 2s ease-out;
+  transition-delay: 2.5s; /* Delay after first set of text appears */
+}
+
+/* Show state to trigger animations */
+.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
+.cursor-dot,
+.cursor-dot-outline {
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    opacity: 0;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+}
+
+.cursor-dot {
+    
+    width: 8px;
+    height: 8px;
+    background-color: #52A3B6;
+}
+
+.cursor-dot-outline {
+   
+    width: 40px;
+    height: 40px;
+    background-color: rgba(128, 128, 128, 0.5);
+    border:2px solid white;
+    Z-index:10000;
+}
+
+
+

@@ -10,11 +10,12 @@
   html {
     scroll-behavior: smooth;
     cursor: none; 
+    
   }
   /* Changing background color */
   body {
     background: var(--bg-color) !important;
-    
+      font-family: "Varela Round", sans-serif !important;
   }
   header{  
     background-color: black !important;

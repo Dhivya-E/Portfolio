@@ -199,7 +199,7 @@
 /* The type and erase effect for .p1 */
 @keyframes typing-erase {
     0% { width: 0 }
-    50%, 80% { width: 100% }
+    50%, 100% { width: 100% }
   
 }
 

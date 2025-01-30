@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhivya's Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Edu+VIC+WA+NT+Beginner:wght@400..700&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="icon" href="./images/logo.png" type="image/icon type">
+    
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ultra&display=swap" rel="stylesheet">
+
+
+
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="contact.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" />
+  </head>
+  <body>
+    <div class="cursor-dot-outline"></div>
+    <div class="cursor-dot"></div>
+    <header class=" fixed-top">
+      <nav class="container-xxl navbar navbar-expand-lg ">
+        <div class="container-fluid">
+          <a class="navbar-brand text-white fw-bold" href="#">
+            <img src="./images/logo.png" width="35" height="40" alt="">
+ 
+            Dhivya E</a>
+          <button class="bg-white navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class=" navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="index.html">ABOUT</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="project.html">PROJECT & SKILLS</a>
+              </li>    
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="curriculum.html">CURRICULUM VITAE</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="hobbies.html">HOBBIES</a>
+              </li>
+              <li class="nav-item mx-2">
+                <a class="nav-link" href="contact.html">CONTACT</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    
+
+   
+<div class="container">
+    <span class=""></span>
+    <div class="form">
+      <div class="contact-info">
+        <h3 class="title">Let's get in touch</h3>
+        <img height="250px" width="100%" src="images/contact.avif"/>
+
+        <div class="social-media">
+          <p>Connect :</p>
+          <div class="social-ico">
+
+            <a href="https://www.linkedin.com/in/dhivya-e-09a873219/" target="_blank">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+
+            <a href="https://github.com/Dhivya-E" target="_blank">
+              <i class="fa-brands fa-github"></i>
+            </a>
+            
+            
+            
+          </div>
+        </div>
+      </div>
+
+      <div class="contact-form">
+        <span class="circle one"></span>
+        <span class="circle two"></span>
+
+        <form action="https://api.web3forms.com/submit" method="POST" autocomplete="off">
+            <input type="hidden" name="access_key" value="c724cd40-e719-4ab8-9baf-4179d28f4d52">
+    
+        
+          <h3 class="title">Contact</h3>
+          <div class="input-container">
+            <input type="text" name="name" class="input" required/>
+            <label for="">Name</label>
+            <span>Name</span>
+          </div>
+          <div class="input-container">
+            <input type="email" name="email" class="input" required/>
+            <label for="">Email</label>
+            <span>Email</span>
+          </div>
+          
+          <div class="input-container textarea">
+            <textarea name="message" class="input" required></textarea>
+            <label for="">Message</label>
+            <span>Message</span>
+          </div>
+          <input  type="submit" value="Send" class="bt" />
+        </form>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+     <!-- Footer -->
+     <footer>
+      <div class=" text-white container-xxl flex-wrap pt-3 d-flex align-items-center justify-content-center justify-content-md-between">
+        <p>Copyright © 2025 Dhivya E</p>
+        <ul class="social-icons d-flex">
+            <a href="https://www.linkedin.com/in/dhivya-e-09a873219/" target="_blank" class="bg-primary mx-2 text-white d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><small><i class="fa-brands fa-linkedin-in"></i></small></a>
+            <a href="https://github.com/Dhivya-E" target="_blank" class="mx-2  bg-white text-black d-flex align-items-center justify-content-center text-decoration-none rounded-circle"><i class="fa-brands fa-github "></i></i></a>
+          </ul>
+      </div>
+     </footer>
+     
+     <script src="script.js"></script>
+     <script>
+        const inputs = document.querySelectorAll(".input");
+
+            function focusFunc() {
+            let parent = this.parentNode;
+            parent.classList.add("focus");
+            }
+
+            function blurFunc() {
+            let parent = this.parentNode;
+            if (this.value == "") {
+                parent.classList.remove("focus");
+            }
+            }
+
+            inputs.forEach((input) => {
+            input.addEventListener("focus", focusFunc);
+            input.addEventListener("blur", blurFunc);
+            });
+
+     </script>
+
+      
+     <!-- Bootstrap script link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  </body>
+</html>

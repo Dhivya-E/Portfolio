@@ -49,14 +49,13 @@
   }
   .hero h1{
     margin-top: -150px;
-    font-family: 'Dancing Script', cursive !important;
-    color: black !important;
+   
+   color: black !important;
     letter-spacing: 3px;
-    font-size: 50px;
+   
   }
  .hero p{
-  font-family: "Ultra", serif;
-  font-size: 30px;
+  font-size: 25px; 
   letter-spacing: 2px;
   color: #25386d !important;
  }
@@ -189,7 +188,7 @@
 }
 
 .wrapper .p2 {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
     transform: translateX(100%);
     animation: 
         typing-backward 8s steps(80, end) 1 0s forwards , /* Delay the start until after .hidden-box expands */
@@ -206,10 +205,23 @@
 /* The type and backward appearance effect for .p2 */
 @keyframes typing-backward {
     0% { transform: translateX(150%); }
-    50%,100% { transform: translateX(45PX); }
+    50%,100% { transform: translateX(15PX); }
    
 }
 
+.hero h1{
+  font-size: 30px;
+}
+/* Styles for laptop and larger screens (e.g., greater than 768px) */
+@media screen and (min-width: 769px) {
+  .hero .p1, .hero .p2 {
+    font-size: 50px; /* Larger font size for laptops */
+  }
+
+  .hero h1{
+    font-size:55px;
+  }
+}
 /* The typewriter cursor effect */
 
 /* Define the keyframes for fade-in effect */
